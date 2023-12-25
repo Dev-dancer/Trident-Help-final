@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global2.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index2.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="desktop-1">
+      <div class="frame">
+        <div class="line-parent">
+          <div class="frame-child"></div>
+          <div class="down-arrow">
+            <a href="#Bokmark">
+              <span><img src="{% static 'images/arrow-down-sign-to-navigate.png' %}" alt="" class="arrow1"></span>
+              <span><img src="{% static 'images/arrow-down-sign-to-navigate.png' %}" alt="" class="arrow2"></span>
+              <span><img src="{% static 'images/arrow-down-sign-to-navigate.png' %}" alt="" class="arrow3"></span>
+            </a>
+          </div>
+        </div>
+        <div class="vector-parent">
+          <img class="frame-inner" alt="" src="{% static 'images/rectangle-5@2x.png' %}"/>
+
+          <button class="clerk-wrapper">
+            <div class="clerk"><a style="text-decoration: none; color: black;"href="{% url 'clerk:dashboard' %}">
+            CLERK
+          </a>
+        </div>    
+          </button>
+        </div>
+        <div class="vector-group">
+          <img class="rectangle-icon" alt="" src="{% static 'images/rectangle-51@2x.png' %}" data-animate-on-scroll/>
+
+          <button class="invester-wrapper">
+            <div class="invester"> <a style="text-decoration: none; color: white;"href="{% url 'investor:register' %}">
+              INVESTER
+            </a>
+            </div>
+          </button>
+        </div>
+        <img  alt="" src="{% static 'images/unsplash_fk3XUcfTAvk.png' %}" class="hero-image"/>
+
+        <div class="trident-help-parent">
+          <b class="trident-help">TRIDENT HELP</b>
+          <div class="lorem-ipsum-dolor-container">
+            <p class="lorem-ipsum-dolor">
+              When every second counts and your financial ship is sinking, we're the lifeboat that gets you back to shore.
+            </p>
+            <p class="lorem-ipsum-dolor">&nbsp;</p>
+            <p class="lorem-ipsum-dolor">
+              Your one stop support for emergencies and difficult times.
+            </p>
+            <p class="lorem-ipsum-dolor">&nbsp;</p>
+            <p class="lorem-ipsum-dolor">&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <img class="frame-icon" alt="" src="{% static 'images/frame.svg' %}" />
+
+      <div class="frame1">
+        <div class="frame2">
+          <b class="why-invest-at">WHY INVEST AT TRIDENT HELP</b>
+          <div class="ium-lectus-eget">
+            <b>Immediate Relief</b> <br>
+            <b>Reliability</b> <br>
+            <b>Community of Investors</b> <br>
+            <b>Long-Term Perspective</b> <br>
+            <b>Transparency</b>
+            <p>Select us because we don't simply offer financial assistance in emergencies; we're dedicated to providing both
+              immediate relief and peace of mind when you need it most.</p>
+          </div>
+          <img class="frame-child2" alt="" src="{% static 'images/unsplash_7PMGUqYQpYBc.png' %}" />
+        </div>
+      </div>
+      <!-- <img class="desktop-1-child" alt="" src="line-5.svg" /> -->
+
+      <div class="frame3">
+        <div class="frame2">
+          <div class="our-policy" id="our-policy2" style="text-decoration: none;">OUR POLICY</div>
+          <div class="malesuada-pulvinar-cras-container">
+            <p class="lorem-ipsum-dolor">&nbsp;</p>
+            <p class="malesuada-pulvinar-cras">
+              Our policy at Trident Help is centered on prioritizing the well-being of individuals facing medical emergencies. We
+              firmly believe that access to essential medical care should never be hindered by financial constraints. To this end,
+              our commitment is to provide swift and reliable financial assistance to patients in hospitals during their time of
+              need. Our policies are designed to alleviate the burden of medical expenses, offering peace of mind to patients and
+              their families during what can be an exceptionally stressful period. With a focus on compassion, efficiency, and a
+              dedication to helping individuals regain their health, our policy reflects our unwavering commitment to being a
+              trusted partner when it matters <b>most</b>.
+            </p>
+          </div>
+          <img class="frame-child3" alt="" src="{% static 'images/unsplash_7PMGUqYQpYc.png' %}" />
+        </div>
+      </div>
+      <!-- <img class="desktop-1-item" alt="" src="rectangle-6.svg" /> -->
+
+
+
+      <div class="navbar">
+        <div class="logo">
+          <div class="ellipse-parent">
+            <div class="ellipse-div"></div>
+            <div class="t">T</div>
+            <div class="line-div"></div>
+          </div>
+          <div class="trident-help1">TRIDENT HELP</div>
+        </div>
+        <div class="home-parent">
+          <button class="home"><a  style="text-decoration: none; color: white;">Home</a></button>
+          <button class="home"><a href="#our-policy2" class="home">Our Policy</a></button>
+          <button class="home">
+            <a href="{% url 'main:toabtpage' %}" style="text-decoration: none; color: white;">
+              About us
+            </a>
+          </button>
+          <button class="home"><a href="#Bokmark2" style="text-decoration: none; color: white;">Contact us</a></button>
+        </div>
+        <!-- <div class="navbar-child"></div> -->
+      </div>
+
+
+      <div class="secondlastbar">
+        <div class="sl1">
+          <!-- <a href="main.html"> -->
+            <img src="LOGO.jpg" alt="Error" class="img-logo">
+          <!-- </a> -->
+        </div>
+        <div class="sl2">
+          <h2 style="margin-left: 20px;">Options</h2>
+          <ul>
+            <li><a style="color: black; font-size: 1.7rem;" class="footer">Home</a></li>
+            <li><a style="color: black; font-size: 1.7rem;"
+                class="footer">Invester</a> </li>
+            <li><a style="color: black; font-size: 1.7rem;"
+                class="footer">Clerk</a> </li>
+          </ul>
+        </div>
+        <div class="sl3">
+          <h2 id="Bokmark2" style="margin-left: 30px;">Contact Us</h2>
+          <ul>
+            <li style="text-decoration: none; color: black; font-size: 1.35rem;"><span style="font-weight: 600;"
+                class="footer">Contact No:</span> 9999999999</li>
+            <li style="text-decoration: none; color: black; font-size: 1.35rem;"><span style="font-weight: 600;"
+                class="footer">Email ID:</span> tridenthelp@gmail.com</li>
+            <li style="text-decoration: none; color: black; font-size: 1.35rem;"><span style="font-weight: 600;"
+                class="footer">LinkedIn:</span> Trident Help</li>
+            <li style="text-decoration: none; color: black; font-size: 1.35rem;"><span style="font-weight: 600;"
+                class="footer">Instagram:</span> Trident_Help</li>
+          </ul>
+        </div>
+      </div>
+      <div class="lastbar">
+        <div class="last_leftbar">
+          <div><a href="#">Privacy Policy</a></div>
+          <div><a href="#">Terms & conditions</a></div>
+          <div><a href="#">Security information</a></div>
+        </div>
+        <!-- <div class="last_rightbar">
+                <a href="">
+                  <img src="fb.png" alt="Error">
+                </a>
+                <a href="">
+                  <img src="twit.png" alt="Error">
+                </a>
+                <a href="">
+                  <img src="li.png" alt="Error">
+                </a>
+                <a href="">
+                  <img src="yt.png" alt="Error">
+                </a>
+              </div> -->
+      </div>
+    </div>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
+</html>
