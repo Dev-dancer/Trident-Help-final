@@ -1,0 +1,86 @@
+{% load static %} //investor register page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/newregister.css' %}">
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+    
+    <div class="register">
+                    <div class="row">
+                        <div class="col-md-3 register-left left-data">
+                            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                            <h3>Trident Help</h3>
+                            <p>You are 30 seconds away from investing!</p>
+                        </div>
+                        
+                        <div class="col-md-9 register-right">
+                            <div class="tab-content" id="myTabContent">
+                                <form action="{% url 'investor:register' %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <h3 class="register-heading">Welcome</h3>
+                                        
+                                        <div class="row register-form">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <!-- <input type="text" class="form-control" placeholder="First Name *" value="" name="first_name"/> -->
+                                                    FIRST NAME -> {{form.first_name}}
+                                                </div>
+                                                <div class="form-group">
+                                                    <!-- <input type="text" class="form-control" placeholder="Last Name *" value="" name="last_name"/> -->
+                                                    LAST NAME -> {{form.last_name}}
+                                                </div>
+                                                <div class="form-group">
+                                                    <!-- <input type="password" class="form-control pwd1" placeholder="Password *" value="" name="password"/> -->
+                                                    PASSWORD -> {{form.password}}
+                                                </div>
+                                                <div class="form-group">
+                                                    <!-- <input type="password" class="form-control re-pwd1"  placeholder="Confirm Password *" name="confirm_password" /> -->
+                                                    CONFIRM PASSWORD -> {{form.confirm_password}}
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <!-- <input type="email" class="form-control" placeholder="Your Email *" value="" name="email" /> -->
+                                                    EMAIL -> {{form.email}}
+                                                </div>
+                                                <div class="form-group">
+                                                    <!-- <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" name="phone_number" /> -->
+                                                    PHONE NUMBER -> {{form.phone_number}}
+                                                </div>
+                                                <!-- <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option class="hidden"  selected disabled>Gender</option>
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                </div>
+                                                 -->
+                                                 <div class="form-group">
+                                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Pan Number *" value=""/>
+                                                </div>
+                                                <input type="submit" class="btnRegister"  value="Register"><br><br><br>
+                                                <br>
+                                                <a href="{% url 'investor:login' %}" class="have-acc">Have an account.?</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+      <script src="{% static 'js/newregister.js' %}"></script>
+</body>
+</html>

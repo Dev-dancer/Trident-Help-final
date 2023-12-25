@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="{% static 'images/Polygon 3.png' %}" alt="" class="bgi-1">
+    <img src="{% static 'images/background copy.png' %}" alt="" class="bgi-2">
+   
+
+
+    <!-- <div class="container">
+        <h1 class="top">INVESTORS</h1>
+        <h3 class="second">Choose from the best of investors we have to offer.</h3>
+        <form method="post" action="{% url 'investor:investment' %}">
+            {% csrf_token %}
+            <div class="third">
+                <div class="left">
+                    <div class="total-investment">
+                        <h2>TOTAL INVESTMENT:</h2>
+                        <input type="number" class="p" name="amt">
+                    </div>
+                    <div class="expected-rate">
+                        <h2>EXPECTED RATE OF INTEREST:</h2>
+                        <input type="number" class="r" name="interest">
+                    </div>
+                    <div class="time-period">
+                        <h2>TIME PERIOD:</h2>
+                        <input type="number" class="t" name="time_period">
+                    </div>
+                    <button type="submit" class="custom-btn">CHECK RETURNS</button>
+                </div>
+                <div class="right">
+                    <div class="invested-amount">
+                        <h2>INVESTED AMOUNT:</h2>
+                        <input type="number" class="same-as-p" readonly>
+                    </div>
+                    <div class="return">
+                        <h2>PROFIT AMOUNT:</h2>
+                        <input type="number" class="si" readonly>
+                    </div>
+                    <div class="total-value">
+                        <h2>TOTAL VALUE:</h2>
+                        <input type="number" class="si-plus-p" readonly>
+                        <a href="{% url 'investor:success' %}">Click</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+ -->
+
+
+
+    <div class="container">
+        <h1 class="top">INVESTORS</h1>
+        <h3 class="second">Choose from the best of investors we have to offer.</h3>
+        <div >
+           
+            <div class="third">
+                <form method="post" action="{% url 'investor:investment' %}" class="left">
+                    {% csrf_token %}
+                    <div class="total-investment">
+                        <h2>TOTAL INVESTMENT:</h2>
+                        <input type="number" class="p" name="amt">
+                        <!-- {{user_profile.amt}} -->
+
+                    </div>
+                    <div class="expected-rate">
+                        <h2>EXPECTED RATE OF INTEREST:</h2>
+                        <input type="number" class="r" name="interest">
+                        <!-- {{user_profile.interest}} -->
+                    </div>
+                    <div class="time-period">
+                        <h2>TIME PERIOD:</h2>
+                        <input type="number" class="t" name="time_period">
+                        <!-- {{user_profile.interest}} -->
+                    </div>
+                    
+                </form>
+                <div class="left"><button type="submit" class="custom-btn left-spacing">CHECK RETURNS</button>
+                </div>
+                
+                <div class="right">
+                    <div class="invested-amount">
+                        <h2>INVESTED AMOUNT:</h2>
+                        <input type="number" class="same-as-p" readonly>
+                    </div>
+                    <div class="return">
+                        <h2>PROFIT AMOUNT:</h2>
+                        <input type="number" class="si" readonly>
+                    </div>
+                    <div class="total-value">
+                        <h2>TOTAL VALUE:</h2>
+                        <input type="number" class="si-plus-p" readonly>
+                        <a href="{% url 'investor:success' %}" >
+                            <button class="second-btn">
+                                INVEST NOW
+                            </button> 
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/investor.js' %}"></script>
+</body>
+</html>

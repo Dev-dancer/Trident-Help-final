@@ -1,0 +1,124 @@
+<!-- {% load static %} 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="{% static 'css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %} " />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+</head>
+
+<body>
+  <div class="desktop-1">
+    <img class="desktop-1-child" alt="" src="{% static 'images/polygon-1.svg' %}" />
+
+    <b class="investors">INVESTORS</b>
+    <img class="desktop-1-item" alt="" src="{% static 'images/rectangle-1.svg' %}" />
+
+
+    {% for invest in investor %}
+    <div class="rectangle-parent">
+      <div class="frame-child"></div>
+      <div class="abc-investors-parent">
+        <div class="abc-investors">{{invest.user.first_name}}</div>
+        <div class="amount-9999-parent">
+          <div class="amount-9999">Amount- &nbsp;&nbsp;{{invest.amt}}</div>
+          <img class="vector-icon" alt="" src="{% static 'images/vector.svg' %}" />
+        </div>
+        <div class="abc-investors">Rate of interest - {{invest.interest}} %</div>
+      </div>
+      <img class="vector-icon1" alt="" src="{% static 'images/vector1.svg' %}" />
+
+      <button class="vector-wrapper">
+        <img class="component-child to-be-clicked" alt="" src="{% static 'images/rectangle-5.svg' %}" />
+      </button>
+      <button class="sel ">
+        <img class="component-child selected" alt="" src="{% static 'images/selected.png' %}" />
+      </button>
+      <button class="proceed">Proceed</button>
+    </div>
+    {% endfor %}
+
+    <div class="rectangle-parent1">
+      <form action="" method="get">
+        <div>
+          <input type="number" class="rectangle-textarea price-filter" name="Filterprice"
+            placeholder="Filter According to Price"> </input>
+          <button style="padding: 20px; border-radius: 10px;" type="submit">SUBMIT </button>
+        </div>
+      </form>
+
+   
+      <div class="choose-from-the">
+        Choose from the best of investors we have to offer.
+      </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html> -->
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="{% static 'css/global_loiii.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/index_loiii.css' %}" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
+</head>
+
+<body>
+  <img src="{% static 'images/polygon 3 loi.png' %}" alt="" class="bg1">
+  <img src="{% static 'images/background copy loi.png' %}" alt="" class="bg2">
+  <div class="desktop-1">
+
+    <b class="investors" style="z-index: 5;">INVESTORS</b>
+    <img class="desktop-1-item" alt="" src="{% static 'images/rectangle-1 loi.svg' %}" />
+
+
+
+    <div class="data-show">
+      {% for invest in investor %}
+      <div class="investor">
+        <img class="img-of-inv" alt="" src="{% static 'images/vector1 loi.svg' %}" style="z-index: 5;" />
+        <h3 style="z-index: 5;">{{invest.user.first_name}}</h3>
+        <h5 style="z-index: 5;">Amount-> &nbsp;{{invest.amt}}</h5>
+        <h5 style="z-index: 5;">Rate of Interest->{{invest.interest}} %</h5>
+        <div class="sel-plain"></div>
+        <button class="sel">
+          <img class="selected" alt="" src="{% static 'images/selected3.png' %}" />
+        </button>
+        <button class="proceed1">
+          <a href="{% url 'clerk:loitosucc' %}" class="no-underline">
+            Proceed
+          </a>
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="rectangle-parent1">
+      <form action="" method="get">
+      <div>
+        <input type="number" class="rectangle-textarea price-filter" placeholder="Filter According to Price" name="Filterprice"></input>
+      </div>
+
+      <button class="submit-filter-btn" style="z-index: 5; cursor: pointer;" type="submit">Add Filter</button>
+    </div>
+    </form>
+    <div class="choose-from-the" style="z-index: 5;">
+      Choose from the best of investors we have to offer.
+    </div>
+  </div>
+  <script src="{% static 'js/index loi.js' %}"></script>
+</body>
+
+</html>

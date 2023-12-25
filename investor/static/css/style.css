@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --color1:#ebf7fd;
+    --color2:#a5def1;
+    --color3:#36506c;
+    --color4:#233142;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+}
+.top,.second{
+    width: 100%;
+    text-align: center;
+}
+.top{
+    font-size: 4rem;
+    font-weight: 700;
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+}
+.second{
+    font-size: 2rem;
+    z-index: 2;
+    position: absolute;
+    top: 130px;
+}
+.third{
+    margin-top: 100px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+.total-investment,.expected-rate,.time-period,.invested-amount,.return,.total-value{
+    display: flex;
+    gap: 50px;
+    color: var(--color1);
+    font-size: 1.25rem;
+}
+.total-investment input,.expected-rate input,.time-period input,.invested-amount input,.return input,.total-value input{
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 220px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+.bgi-1{
+    position: absolute;
+    z-index: 0;
+    /* opacity: 0.7; */
+    left: -200px;
+    bottom: -500px;
+    height: 1200px;
+}
+.bgi-2{
+    position: absolute;
+    z-index: 1;
+    height: 1200px;
+    right: -200px;
+    bottom: -700px;
+
+}
+.left,.right{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.left{
+    margin-top: 100px;
+    margin-left: -100px;
+}
+.right{
+    margin-top: 250px;
+    z-index: 2;
+    margin-left: 450px;
+}
+/* .left button,.right button{
+    width: 100%;
+} */
+.custom-btn{
+    height: 70px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color1);
+    background-color: var(--color4);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s linear 0s;
+    z-index: 2;
+}
+.second-btn{
+    height: 70px;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--color4);
+    background-color: var(--color1);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s linear 0s;
+}
+.custom-btn:hover{
+    transform: scale(1.1);
+}
+.second-btn:hover{
+    transform: scale(1.1);
+}
+.no-underline{
+    text-decoration: none;
+    color: var(--color4);
+}
+
+.left-spacing{
+    position: absolute;
+    left: 450px;
+    bottom: 200px;
+}
