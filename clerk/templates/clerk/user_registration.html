@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_clerk_registration.css' %}">
+</head>
+
+<body>
+    <a href="{% url 'main:main_page' %}">
+        <h3 class="home">Home</h3>
+    </a>
+    <img src="{% static 'images/background copy editted.png' %}" alt="" class="bg1">
+    <img src="{% static 'images/Polygon 3 editted.png' %}" alt="" class="bg2">
+    <div class="container">
+        <div class="card">
+            <h1 class="top">USER REGISTRATION</h1>
+            <form method="post" action="{% url 'clerk:register_user' %}" style="margin-top: 30px;">
+                {% csrf_token %}
+                <div class="row names">
+                    <div>
+                        <label for="fname" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: 50px;">First
+                            Name</label>
+                        <input type="text" placeholder="First Name" class="txt" name="first_name" required>
+                    </div>
+                    <div class="last-name">
+                        <label for="lname" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left:20px;">Last
+                            Name</label>
+                        <input type="text" placeholder="Last Name" class="txt" name="last_name" required>
+                    </div>
+                </div>
+                <!-- Add other fields with name attributes -->
+                <button type="submit" class="submit-btn">SUBMIT DETAILS</button>
+            </form>
+
+                <!-- <div class="row">
+                    <div>
+                        <label for="fathername" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: 10px;">Father's Name</label>
+                        <input type="text" placeholder="Father's Name" class="txt" required>
+                    </div>
+                    <div>
+                        <label for="mname" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left:-30px;">Mother's Name</label>
+                        <input type="text" placeholder="Mother's Name" class="txt" required>
+                    </div>
+                </div> -->
+                <!-- <div class="row-gender">
+                    <label for="" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: -170px;">Gender</label>
+                    <input type="radio" id="html" name="gender" value="Male">
+                    <label for="Male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="Female">Female</label><br>
+                </div> -->
+                <!-- <div class="row">
+                    <div>
+                        <label for="pan" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left:0px;">PAN Number</label>
+                        <input type="number" placeholder="PAN" class="txt" required>
+                    </div>
+                    <div>
+                        <label for="mobile" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: -20px;">Mobile Number</label>
+                        <input type="number" placeholder="9999" class="txt" required>
+                    </div>
+                </div> -->
+                <!-- <div class="row">
+                    <div>
+                        <label for="occupation" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: -100px;">Occupation</label>
+                        <input type="text" placeholder="occupation" class="txt" required>
+                    </div>
+                    <div>
+                        <label for="income" style="font-size: 1.7rem; font-weight: 700; width: 100%; ">Income</label>
+                        <input type="number" placeholder="Rs. ----" class="txt" required>
+                    </div>
+                </div> -->
+                <!-- <div class="row">
+                    <div>
+                        <label for="address" style="font-size: 1.7rem; font-weight: 700; width: 100%; margin-left: -100px; margin-bottom: 20px;">Address</label>
+                        <input type="text" placeholder="Address" class="txt" required>
+                    </div>
+                    <div>
+                        <label for="pincode" style="font-size: 1.7rem; font-weight: 700; width: 100%; ">Pincode</label>
+                        <input type="number" placeholder="123456" class="txt" required>
+                    </div>
+                </div> -->
+                <button class="submit-btn">
+                    <a href="{% url 'clerk:dashboard' %}" class="no-underline">SUBMIT DETAILS</a>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

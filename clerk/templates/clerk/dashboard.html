@@ -1,0 +1,48 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style_clerk.css' %}">
+</head>
+<body>
+    <img src="{% static 'images/background copy.png'%}" alt="" class="bg1">
+    <img src="{% static 'images/Polygon 3.png'%}" alt="" class="bg2">
+    <div class="container">
+        <div class="glass">
+            <div class="top">
+                <h1>WELCOME TO TRIDENT HELP</h1>
+            </div>
+            <div class="second">
+                <h3>CHOOSE A PLAN</h3>
+                <h5>Choose from the best plans available out there for instant funds.</h5>
+            </div>
+            <div class="add-member-card">
+                <h5>ADD MEMBER</h5>
+                <button>
+                    <a href="{% url 'clerk:dash_to_userreg' %}" style="text-decoration: none; color: white;">
+                        <img src="{% static 'images/enter button.PNG'%}" class="enter-member" alt="">
+                    </a>
+                </button>
+            </div>
+            <div class="cards">
+                <div class="card1">
+                    <h3>FROM US</h3>
+                    <h5>Get your sum with fixed low interest rates</h5>
+                    <button class="btn-submit"><a href="{% url 'clerk:dash_to_ourfund' %}" style="text-decoration: none; color: white;">SELECT</a></button>
+                </div>
+                <div class="card2">
+                    <h3>FROM OUR INVESTORS</h3>
+                    <h5>Get your required sum on lucrative rates.</h5>
+                    <button class="btn-submit"><a href="{% url 'clerk:dashtoloi' %}" style="text-decoration: none; color: white;">SELECT</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'css/global clerk.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index clerk.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <img src="{% static 'images/background ourfund.png' %}" alt="Error" class="bgi">
+    <div class="our-plans-have">
+      *Our plans have fixed rate of interest of 5%
+    </div>
+    <div class="desktop-2">
+      <img class="desktop-2-child" alt="" src="{% static 'css/polygon-2.svg' %}" />
+
+      <b class="our-fund">OUR FUND</b>
+      <div class="get-instant-emergency">
+        Get instant emergency funds at fixed and attractive interest rates.
+      </div>
+      <div class="vector-parent">
+        <img class="frame-child" alt="" src="{% static './public/rectangle-9.svg' %}" />
+
+        <button class="apply-now-wrapper">
+          <a href="{% url 'clerk:ourfundtosuccess' %}" style="text-decoration: none;">
+            <div class="apply-now">APPLY NOW</div>
+          </a>
+        </button>
+        <div class="vector-group">
+          <input type="number" class="frame-item" placeholder="Enter Amount"> </input>
+          <div class="enter-amount"></div>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+  :root{
+    --color1:#233142;
+    --color2:#36506c;
+    --color3:#a5def1;
+    --color4:#ebf7fd;
+  }
+  .container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #a5def175;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+.glass{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--color1);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #36506c71;
+}
+  .top h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    color: var(--color4);
+  }
+  .second,.top{
+    color: var(--color4);
+  }
+  .second h3{
+    font-size: 2.1rem;
+  }
+  .second h5{
+    font-size: 1.5rem;
+  }
+  .second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  .add-member-card{
+    height: 120px;
+    width: 250px;
+    background-color: var(--color4);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .add-member-card h5{
+    font-size: 1.5rem;
+  }
+  .enter-member{
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+  }
+  .cards{
+    display: flex;
+    gap: 50px;
+  }
+  .card1{
+    height: 200px;
+    width: 330px;
+    background-color: var(--color4);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .card2{
+    height: 200px;
+    width: 330px;
+    background-color: var(--color4);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+.card1 h3{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.card1 h5{
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+.card2 h3{
+    font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
+}
+.card2 h5{
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+.btn-submit{
+    height: 40px;
+    width: 90px;
+    cursor: pointer;
+    border: 1px solid var(--color1);
+    border-radius: 15px;
+    transition: all 0.1s linear 0s;
+    background-color: var(--color2);
+    color: var(--color4);
+    font-weight: 700;
+}
+.btn-submit:hover{
+    transform: scale(1.1);
+}
+.bg1{
+    position: absolute;
+    height: 1000px;
+    bottom: -180px;
+    left: -150px;
+    z-index: -1;
+    opacity: 0.5;
+}
+.bg2{
+    position: absolute;
+    height: 1000px;
+    bottom: -480px;
+    left: 750px;
+    z-index: -1;
+    opacity: 0.9;
+}
